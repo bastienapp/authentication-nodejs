@@ -2,10 +2,10 @@
   "name": "server",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
-    "start": "node -r dotenv/config index",
-    "dev": "nodemon -r dotenv/config index.js",
+    "start": "node -r dotenv/config src/index",
+    "dev": "nodemon -r dotenv/config src/index.js",
     "lint": "./node_modules/.bin/eslint --ext .js",
     "test": "DB_NAME=databasename_test jest",
     "test:watch": "DB_NAME=databasename_test jest --watch"
@@ -14,9 +14,11 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "bcrypt": "^5.0.1",
     "cors": "^2.8.5",
-    "dotenv": "^8.2.0",
-    "express": "^4.17.1"
+    "dotenv": "^8.6.0",
+    "express": "^4.17.1",
+    "mysql2": "^2.2.5"
   },
   "devDependencies": {
     "babel-eslint": "^10.1.0",
