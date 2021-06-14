@@ -9,7 +9,11 @@ const app = express();
 app.use(express.json());
 
 // TODO: configure cors
-app.use(cors());
+app.use(
+  cors({
+    origin: process.env.URL_FRONTEND,
+  })
+);
 
 // TODO: add your routes here
 app.use('/auth', authenticationRoute);
